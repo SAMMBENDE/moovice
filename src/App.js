@@ -9,6 +9,7 @@ import Discover from './components/Discover';
 import Popular from './components/Popular';
 import DiscoverBattle from './components/DiscoverBattle';
 import MyList from './components/MyList';
+import PopularBattle from './components/DiscoverBattle';
 class App extends React.Component {
   render() {
     return (
@@ -17,27 +18,27 @@ class App extends React.Component {
           <nav>
             <ul>
               <li><Link to="/">This week</Link></li>
-              <li><Link to="/battle/">Battle</Link></li>
+              <li><Link to="/battle/">This week battle</Link></li>
               <li><Link to="/popular/">Popular</Link></li>
-              <li><Link to="/popular-battle/">Popular-battle</Link></li>
+              <li><Link to="/popular-battle/">Popular battle</Link></li>
               <li><Link to="/my-list/">My List</Link></li>
             </ul>
           </nav>
           <Switch>
           <Route path="/battle/">
-              <Battle />
+              <DiscoverBattle />
             </Route>
           <Route path="/popular/">
               <Popular />
             </Route>
             <Route path="/popular-battle/">
-              <Popular-battle />
+              <PopularBattle />
             </Route>
             <Route path="/my-list/">
-              <My-List />
+              <MyList />
             </Route>
             <Route path="/">
-              <This-week />
+              <Discover />
             </Route>
           </Switch>
         </div>
